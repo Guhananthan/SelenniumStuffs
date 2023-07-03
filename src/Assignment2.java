@@ -10,11 +10,11 @@ public class Assignment2 {
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
 
-		ChromeOptions options = new ChromeOptions();
+		/*ChromeOptions options = new ChromeOptions();
 		options.addArguments("--remote-allow-origins=*");
 		System.setProperty("webdriver.chrome.driver",
-				"/Users/guhananthansivakumar/Projects/chromedriver_mac64/chromedriver");
-		WebDriver driver = new ChromeDriver(options);
+				"/Users/guhananthansivakumar/Projects/chromedriver_mac64/chromedriver");*/
+		WebDriver driver = new ChromeDriver();
 		driver.get("https://rahulshettyacademy.com/angularpractice/");
 		driver.findElement(By.name("name")).sendKeys("Sadhana");
 		driver.findElement(By.name("email")).sendKeys("sadhu@gmail.com");
@@ -29,6 +29,7 @@ public class Assignment2 {
 		Thread.sleep(2000);
 		System.out.println(
 				driver.findElement(By.xpath("//div[@class='alert alert-success alert-dismissible']")).getText());
+		driver.quit();
 
 	}
 

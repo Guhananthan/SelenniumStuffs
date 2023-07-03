@@ -12,10 +12,10 @@ public class Locators {
 		// TODO Auto-generated method stub
 		
 		
-		ChromeOptions options = new ChromeOptions();
+		/*ChromeOptions options = new ChromeOptions();
 		options.addArguments("--remote-allow-origins=*");
-		System.setProperty("webdriver.chrome.driver","/Users/guhananthansivakumar/Projects/chromedriver_mac64/chromedriver");
-		WebDriver driver = new ChromeDriver(options);
+		System.setProperty("webdriver.chrome.driver","/Users/guhananthansivakumar/Projects/chromedriver_mac64/chromedriver");*/
+		WebDriver driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		driver.get("https://rahulshettyacademy.com/locatorspractice/");
 		driver.findElement(By.id("inputUsername")).sendKeys("Guha");

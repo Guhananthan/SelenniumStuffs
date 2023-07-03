@@ -15,11 +15,11 @@ public class BrokenUrls {
 
 	public static void main(String[] args) throws MalformedURLException, IOException {
 		// TODO Auto-generated method stub
-		ChromeOptions options = new ChromeOptions();
+		/*ChromeOptions options = new ChromeOptions();
 		options.addArguments("--remote-allow-origins=*");
 		System.setProperty("webdriver.chrome.driver",
-				"/Users/guhananthansivakumar/Projects/chromedriver_mac64/chromedriver");
-		WebDriver driver = new ChromeDriver(options);
+				"/Users/guhananthansivakumar/Projects/chromedriver_mac64/chromedriver");*/
+		WebDriver driver = new ChromeDriver();
 		driver.get("https://rahulshettyacademy.com/AutomationPractice/");
 		
 		List<WebElement> links = driver.findElements(By.cssSelector("li[class='gf-li'] a"));

@@ -39,8 +39,8 @@ public class JavaStreams {
 		names.add("zacker");
 
 		/*
-		 * 1. There is no life for intermediate op if there is no Terminal op 2.
-		 * Terminal op will execute only if intermediate op returns true
+		 * 1. There is no life for intermediate op if there is no Terminal op 
+		 * 2. Terminal op will execute only if intermediate op returns true
 		 */
 
 		long val = names.stream().filter(s -> s.startsWith("A")).count();

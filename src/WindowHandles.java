@@ -6,24 +6,26 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class WindowHandles {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		ChromeOptions options = new ChromeOptions();
+		/*ChromeOptions options = new ChromeOptions();
 		options.addArguments("--remote-allow-origins=*");
 		System.setProperty("webdriver.chrome.driver",
-				"/Users/guhananthansivakumar/Projects/chromedriver_mac64/chromedriver");
-		WebDriver driver = new ChromeDriver(options);
+				"/Users/guhananthansivakumar/Projects/chromedriver_mac64/chromedriver");*/
+		WebDriver driver = new ChromeDriver();
+		//System.setProperty("webdriver.gecko.driver", "/Users/guhananthansivakumar/Projects/geckodriver");
+		//WebDriver driver = new FirefoxDriver();
 		driver.get("https://rahulshettyacademy.com/loginpagePractise/");
 		driver.findElement(By.cssSelector(".blinkingText")).click();
 		Set<String> windows = driver.getWindowHandles();
 		Iterator<String> it = windows.iterator();
 		String parentId = it.next();
 		String childId = it.next();
-
 		driver.switchTo().window(childId);
 		System.out.println(driver.findElement(By.cssSelector(".im-para.red")).getText());
 		driver.findElement(By.cssSelector(".im-para.red")).getText();

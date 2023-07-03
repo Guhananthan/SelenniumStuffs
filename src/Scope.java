@@ -12,11 +12,8 @@ public class Scope {
 
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
-		ChromeOptions options = new ChromeOptions();
-		options.addArguments("--remote-allow-origins=*");
-		System.setProperty("webdriver.chrome.driver",
-				"/Users/guhananthansivakumar/Projects/chromedriver_mac64/chromedriver");
-		WebDriver driver = new ChromeDriver(options);
+		
+		WebDriver driver = new ChromeDriver();
 		driver.get("https://rahulshettyacademy.com/AutomationPractice/");
 		
 		System.out.println(driver.findElements(By.tagName("a")).size());
@@ -29,6 +26,7 @@ public class Scope {
 		System.out.println(columnDriver.findElements(By.tagName("a")).size());
 		
 		/*Click on each link in the column and check if the pages are opening*/
+		
 		for(int i=1;i<columnDriver.findElements(By.tagName("a")).size();i++) {
 			
 			String clickOnLinkTab = Keys.chord(Keys.COMMAND,Keys.RETURN);

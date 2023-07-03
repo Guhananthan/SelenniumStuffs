@@ -13,11 +13,8 @@ public class WebtableFilterJavaStream {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		ChromeOptions options = new ChromeOptions();
-		options.addArguments("--remote-allow-origins=*");
-		System.setProperty("webdriver.chrome.driver",
-				"/Users/guhananthansivakumar/Projects/chromedriver_mac64/chromedriver");
-		WebDriver driver = new ChromeDriver(options);
+		
+		WebDriver driver = new ChromeDriver();
 		driver.get("https://rahulshettyacademy.com/seleniumPractise/#/offers");
 		
 		driver.findElement(By.id("search-field")).sendKeys("Rice");

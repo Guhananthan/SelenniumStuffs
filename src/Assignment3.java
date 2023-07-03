@@ -16,11 +16,11 @@ public class Assignment3 {
 		// TODO Auto-generated method stub
 
 		
-		ChromeOptions options = new ChromeOptions();
+		/*ChromeOptions options = new ChromeOptions();
 		options.addArguments("--remote-allow-origins=*");
 		System.setProperty("webdriver.chrome.driver",
-				"/Users/guhananthansivakumar/Projects/chromedriver_mac64/chromedriver");
-		WebDriver driver = new ChromeDriver(options);
+				"/Users/guhananthansivakumar/Projects/chromedriver_mac64/chromedriver");*/
+		WebDriver driver = new ChromeDriver();
 		WebDriverWait w = new WebDriverWait(driver,Duration.ofSeconds(5));
 		
 		driver.get("https://rahulshettyacademy.com/loginpagePractise/");
@@ -45,6 +45,8 @@ public class Assignment3 {
 		prdcts.get(i).click();
 		}
 		driver.findElement(By.partialLinkText("Checkout")).click();
+		
+		driver.quit();
 	}
 
 }

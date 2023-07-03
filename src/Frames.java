@@ -11,11 +11,11 @@ public class Frames {
 		// TODO Auto-generated method stub
 
 		
-		ChromeOptions options = new ChromeOptions();
+		/*ChromeOptions options = new ChromeOptions();
 		options.addArguments("--remote-allow-origins=*");
 		System.setProperty("webdriver.chrome.driver",
-				"/Users/guhananthansivakumar/Projects/chromedriver_mac64/chromedriver");
-		WebDriver driver = new ChromeDriver(options);
+				"/Users/guhananthansivakumar/Projects/chromedriver_mac64/chromedriver");*/
+		WebDriver driver = new ChromeDriver();
 		driver.get("https://jqueryui.com/droppable/");
 		System.out.println(driver.findElements(By.tagName("iframe")).size());
 		driver.switchTo().frame(driver.findElement(By.cssSelector("iframe.demo-frame")));

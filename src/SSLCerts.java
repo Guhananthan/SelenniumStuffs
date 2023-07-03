@@ -8,17 +8,13 @@ public class SSLCerts {
 		// TODO Auto-generated method stub
 
 		
-		ChromeOptions options = new ChromeOptions();
-		options.setAcceptInsecureCerts(true);
-		options.addArguments("--remote-allow-origins=*");
-		System.setProperty("webdriver.chrome.driver",
-				"/Users/guhananthansivakumar/Projects/chromedriver_mac64/chromedriver");
-		WebDriver driver = new ChromeDriver(options);
+		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 		driver.get("https://expired.badssl.com/");
 		Thread.sleep(2000);
 		System.out.println( driver.getTitle());
+		driver.quit();
 	}
 
 }

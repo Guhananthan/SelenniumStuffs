@@ -11,11 +11,11 @@ public class Assignment4 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		ChromeOptions options = new ChromeOptions();
+		/*ChromeOptions options = new ChromeOptions();
 		options.addArguments("--remote-allow-origins=*");
 		System.setProperty("webdriver.chrome.driver",
-				"/Users/guhananthansivakumar/Projects/chromedriver_mac64/chromedriver");
-		WebDriver driver = new ChromeDriver(options);
+				"/Users/guhananthansivakumar/Projects/chromedriver_mac64/chromedriver");*/
+		WebDriver driver = new ChromeDriver();
 		driver.get("https://the-internet.herokuapp.com");
 		driver.findElement(By.linkText("Multiple Windows")).click();
 		driver.findElement(By.cssSelector("a[href*='windows']")).click();
@@ -30,6 +30,7 @@ public class Assignment4 {
 		driver.switchTo().window(parentId);
 		
 		System.out.println(driver.findElement(By.xpath("//div[@id='content']/div/h3")).getText());
+		driver.quit();
 	}
 
 }

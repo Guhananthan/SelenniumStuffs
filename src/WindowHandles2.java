@@ -16,11 +16,8 @@ public class WindowHandles2 {
 
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
-		ChromeOptions options = new ChromeOptions();
-		options.addArguments("--remote-allow-origins=*");
-		System.setProperty("webdriver.chrome.driver",
-				"/Users/guhananthansivakumar/Projects/chromedriver_mac64/chromedriver");
-		WebDriver driver = new ChromeDriver(options);
+		
+		WebDriver driver = new ChromeDriver();
 		driver.get("https://rahulshettyacademy.com/angularpractice/");
 		driver.switchTo().newWindow(WindowType.WINDOW);
 		Set<String> window = driver.getWindowHandles();

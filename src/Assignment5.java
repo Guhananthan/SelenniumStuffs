@@ -9,11 +9,8 @@ public class Assignment5 {
 		// TODO Auto-generated method stub
 		
 		
-		ChromeOptions options = new ChromeOptions();
-		options.addArguments("--remote-allow-origins=*");
-		System.setProperty("webdriver.chrome.driver",
-				"/Users/guhananthansivakumar/Projects/chromedriver_mac64/chromedriver");
-		WebDriver driver = new ChromeDriver(options);
+		
+		WebDriver driver = new ChromeDriver();
 		driver.get("https://the-internet.herokuapp.com");
 		driver.findElement(By.linkText("Nested Frames")).click();
 		driver.switchTo().frame(driver.findElement(By.xpath("//frame[@name='frame-top']")));

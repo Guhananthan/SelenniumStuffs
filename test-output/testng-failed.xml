@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Loan Department]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Car Loan(failed)">
+  <test thread-count="5" name="Regression(failed)">
+    <groups>
+      <run>
+        <include name="smoke"/>
+      </run>
+    </groups>
     <classes>
       <class name="testNG.day3">
         <methods>
-          <include name="afterEveryMethod"/>
           <include name="APILoginCarLoan"/>
-          <include name="afterSuite"/>
-          <include name="beforeEveryMethod"/>
         </methods>
       </class> <!-- testNG.day3 -->
     </classes>
-  </test> <!-- Car Loan(failed) -->
+  </test> <!-- Regression(failed) -->
 </suite> <!-- Failed suite [Loan Department] -->

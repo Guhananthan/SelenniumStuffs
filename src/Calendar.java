@@ -10,11 +10,8 @@ public class Calendar {
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
 
-		ChromeOptions options = new ChromeOptions();
-		options.addArguments("--remote-allow-origins=*");
-		System.setProperty("webdriver.chrome.driver",
-				"/Users/guhananthansivakumar/Projects/chromedriver_mac64/chromedriver");
-		WebDriver driver = new ChromeDriver(options);
+		
+		WebDriver driver = new ChromeDriver();
 
 		driver.get("https://www.path2usa.com/travel-companion/");
 		Thread.sleep(2000);
